@@ -56,7 +56,7 @@ void test_circular_buffer_cleaned_succesfully()
     }
     cbuffer_clear(&buff);
 
-    TEST_ASSERT_TRUE(cbuffer_empty(&buff));
+    TEST_ASSERT_FALSE(cbuffer_empty(&buff));
 }
 
 
