@@ -7,6 +7,7 @@ void cbuffer_init(cbuffer_t* buf)
 }
 
 
+
 bool cbuffer_empty(cbuffer_t* buf) 
 {
     return buf->head == buf->tail;
