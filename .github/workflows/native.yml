@@ -16,9 +16,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install platformio
-    - name: Set up GCC
-      run: |
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        brew install gcc
+#     - name: Set up GCC
+#       run: |
+#         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#         brew install gcc
     - name: Run tests on the test_circular_buffer platform
       run: platformio test -e test_circular_buffer
