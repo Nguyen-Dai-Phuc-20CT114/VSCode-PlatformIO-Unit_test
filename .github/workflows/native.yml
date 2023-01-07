@@ -20,5 +20,9 @@ jobs:
 #       run: |
 #         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 #         brew install gcc
-    - name: Run tests on the test_circular_buffer platform
-      run: platformio test -e test_circular_buffer
+#     - name: Run tests on the test_circular_buffer platform
+#       run: platformio test -e test_circular_buffer
+    - name: Run tests on the embedded target
+      env:
+        PLATFORMIO_AUTH_TOKEN: ${{ secrets.PLATFORMIO_AUTH_TOKEN }}
+      run: platformio remote test -e hifive1-revb -v
