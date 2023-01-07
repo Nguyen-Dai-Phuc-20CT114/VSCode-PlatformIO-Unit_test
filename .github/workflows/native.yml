@@ -17,9 +17,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install platformio
     - name: Set up GCC
-      uses: egor-tensin/setup-gcc@v1
-      with:
-        version: latest
-        platform: x64
+      run: |
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        brew install gcc
     - name: Run tests on the native platform
       run: platformio test -e native
